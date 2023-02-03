@@ -21,6 +21,7 @@ jobs:
             ghcr.io/stv-io/spring-cloud-config-server
           tags: |
             type=sha
+            type=raw,value=4.0.1-jdk19-spring-v3.0.2
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v2
       - name: Set up Docker Buildx
