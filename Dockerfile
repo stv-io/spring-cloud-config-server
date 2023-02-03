@@ -6,5 +6,5 @@ RUN gradle build --no-daemon
 FROM docker.io/library/openjdk:19-jdk-slim
 RUN mkdir /app
 COPY --from=build /home/gradle/src/build/libs/*.jar /app/spring-boot-application.jar
-EXPOSE 80
+EXPOSE 8888
 ENTRYPOINT ["java", "-jar", "/app/spring-boot-application.jar"]
